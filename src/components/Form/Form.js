@@ -53,7 +53,14 @@ const Form = () => (
 
           <Label htmlFor="message">
             Message
-            <TextArea rows="4" cols="50" />
+            <TextArea
+              rows="4"
+              cols="55"
+              name="message"
+              onChange={handleChange}
+              onBlur={handleBlur}
+              value={values.message}
+            />
             {errors.message && touched.message && errors.message}
           </Label>
 
