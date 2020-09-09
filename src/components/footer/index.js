@@ -21,7 +21,7 @@ const Footer = () => {
       </Span>
 
       <div>
-        <a href="http://google.com">
+        <a href="https://github.com/P3drodeSousa">
           <GrGithub size={50} color="white" />
         </a>
       </div>
