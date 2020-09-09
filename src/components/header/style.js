@@ -10,7 +10,7 @@ export const Head = styled.nav`
   justify-content: center;
   border-bottom: ${props => (props.contact ? "1px solid #e6ecf8" : "none")};
 
-  ${props => props.theme.breakpoints.tablet} {
+  @media ${props => props.theme.breakpoints.tablet} {
     margin: auto 50px;
   }
 
