@@ -1,7 +1,7 @@
 import React from "react"
 import { Foot, Span } from "./styles"
 import { graphql, useStaticQuery } from "gatsby"
-import { GrGithub } from "react-icons/gr"
+import { AiFillGithub, AiOutlineMail } from "react-icons/ai"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -22,7 +22,10 @@ const Footer = () => {
 
       <div>
         <a href="https://github.com/P3drodeSousa" target="blank">
-          <GrGithub size={50} color="white" />
+          <AiFillGithub size={30} color="white" />
+        </a>
+        <a href="https://github.com/P3drodeSousa" target="blank">
+          <AiOutlineMail size={30} color="white" />
         </a>
       </div>
 
