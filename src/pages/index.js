@@ -5,10 +5,12 @@ import Description from "../components/description"
 import Tech from "../components/tech"
 import Resume from "../components/resume"
 import Footer from "../components/footer"
+import Header from "../components/header"
 
 export default function Home() {
   return (
     <Layout>
+      <Header />
       <Hero />
       <Description />
       <Tech />

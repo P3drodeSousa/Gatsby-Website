@@ -1,6 +1,7 @@
 import React from "react"
 import { Foot, Span } from "./styles"
 import { graphql, useStaticQuery } from "gatsby"
+import { GrGithub } from "react-icons/gr"
 
 const Footer = () => {
   const data = useStaticQuery(graphql`
@@ -10,6 +11,7 @@ const Footer = () => {
       }
     }
   `)
+
   return (
     <Foot>
       <img src={data.logo.publicURL} alt="My Logo" height={50} />
@@ -17,6 +19,13 @@ const Footer = () => {
         Living, learning, & leveling <br />
         up one day at a time.
       </Span>
+
+      <div>
+        <a href="http://google.com">
+          <GrGithub size={50} color="white" />
+        </a>
+      </div>
+
       <Span copy>© {new Date().getFullYear()} Pedro de Sousa</Span>
     </Foot>
   )

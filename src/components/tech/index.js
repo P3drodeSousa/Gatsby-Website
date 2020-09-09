@@ -1,15 +1,14 @@
 import React from "react"
 import { Container, H3 } from "../style"
 import { PriceContainer, Price } from "./styles"
-// import { RiPencilRuler2Line, RiPagesLine, RiServerLine } from "react-icons/ri"
-import { GiMicrochip, GiMuscleUp, GiBrain } from "react-icons/gi"
+import { GrCode, GrCompliance, GrBook } from "react-icons/gr"
 
 const Tech = () => {
   return (
     <Container>
       <PriceContainer>
         <Price>
-          <GiMicrochip size={50} color="#7510F7" />
+          <GrCode size={70} color="#7510F7" />
           <H3>Technologies</H3>
           <ul>
             <li>HTML</li>
@@ -24,7 +23,6 @@ const Tech = () => {
             <li>Framer</li>
             <li>Gatsby</li>
             <li>Bootstrap</li>
-            <li>Tailwind</li>
             <li>Node</li>
             <li>Firebase</li>
             <li>GIT</li>
@@ -32,7 +30,7 @@ const Tech = () => {
           </ul>
         </Price>
         <Price>
-          <GiMuscleUp size={50} color="#7510F7" />
+          <GrCompliance size={70} color="#7510F7" />
           <H3>Competences</H3>
           <ul>
             <li> Développement REST / Graphql API</li>
@@ -43,7 +41,7 @@ const Tech = () => {
           </ul>
         </Price>
         <Price>
-          <GiBrain size={50} color="#7510F7" />
+          <GrBook size={70} color="#7510F7" />
           <H3>Initiations</H3>
           <ul>
             <li>Angular</li>

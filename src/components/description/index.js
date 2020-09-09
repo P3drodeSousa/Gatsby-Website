@@ -10,17 +10,10 @@ const Description = () => {
           Hi, I’m Pedro. Nice to meet you.
         </h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
-          accusamus nemo iste asperiores itaque consequatur ratione nam expedita
-          dolores magni voluptatibus fugit labore, in repudiandae officia at
-          neque aliquam corporis maiores! Qui doloremque rem rerum fugit beatae
-          corrupti inventore dolorum numquam magni tempora, delectus ipsam
-          voluptatem. Quasi veniam tempora molestias, ullam error amet totam
-          reiciendis sapiente facere cum! Illo ad, pariatur porro quos velit
-          facere autem voluptas officiis. Molestiae amet ullam sequi odit quod
-          quisquam expedita obcaecati sit nobis. In dignissimos eveniet aut
-          similique cum quibusdam cumque temporibus autem unde, quidem doloribus
-          voluptas at iure. Voluptas voluptate tempore atque alias!
+          Développeur Fullstack enthousiast et curieus, j’ai la chance de faire
+          un métier qui me passionne. Intéressée par tout ce qui touche à mon
+          domaine, j’effectue une veille quotidienne concernant les nouvelles
+          technologies web et le design.
         </p>
       </Container>
     </Section>

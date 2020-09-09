@@ -4,12 +4,13 @@ import { Link } from "gatsby"
 
 export const Head = styled.nav`
   min-height: 52px;
-  padding: 3.5rem 0;
+  padding: 3rem 0;
   box-shadow: none;
   display: flex;
   justify-content: center;
+  border-bottom: ${props => (props.contact ? "1px solid #e6ecf8" : "none")};
 
-  @media ${props => props.theme.breakpoints.tablet} {
+  ${props => props.theme.breakpoints.tablet} {
     margin: auto 50px;
   }
 
@@ -21,6 +22,8 @@ export const Head = styled.nav`
 export const HeaderContainer = styled.div`
   display: flex;
   width: 100%;
+  align-items: center;
+  justify-content: center;
   max-width: 1270px;
 `
 

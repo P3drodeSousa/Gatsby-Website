@@ -1,35 +1,47 @@
 import styled from "styled-components"
 
 export const Title = styled.h1`
-  font-weight: 100;
+  font-weight: 500;
   text-align: center;
-  font-size: ${props => props.theme.title.main2};
+  font-size: 4rem;
   margin-bottom: 8rem;
 `
 
 export const FormContainer = styled.form`
-  display: flex;
-  max-width: 500px;
-  justify-content: flex-start;
-  align-items: center;
-  flex-wrap: wrap;
+  display: grid;
+  width: 70%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 2.5fr 1.4fr;
+  grid-gap: 30px;
+`
+
+export const Nom = styled.div`
+  grid-area: 1/1/2/3;
+`
+export const Email = styled.div`
+  grid-area: 1/3/2/5;
+`
+export const TextAreaContainer = styled.div`
+  grid-area: 2/1/3/5;
+`
+export const ButtonContainer = styled.div`
+  grid-area: 3/2/4/4;
+  align-self: flex-end;
+  justify-self: center;
 `
 
 export const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  margin: 1rem 2rem;
   font-size: ${props => props.theme.title.p};
   color: ${props => props.theme.colors.silver};
 `
 
 export const Input = styled.input`
-  height: 2.5rem;
   width: 100%;
+  margin-top: 0.5rem;
   padding: 1.5rem;
   border: 1px solid #e6ecf8;
   outline: none;
-  margin-top: 0.5rem;
+
   color: #363636;
 
   &:focus {
@@ -37,29 +49,30 @@ export const Input = styled.input`
   }
 `
 export const TextArea = styled.textarea`
-  flex-grow: 1;
-  height: 15rem;
   padding: 1.5rem;
+  margin-top: 0.5rem;
+  height: 100%;
+  width: 100%;
   border: 1px solid #e6ecf8;
   outline: none;
-  margin-top: 0.5rem;
+  resize: none;
 
   &:focus {
     border: 1px solid #3273dc;
   }
 `
 export const Button = styled.button`
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 600;
   cursor: pointer;
   align-items: center;
-  padding: 1.4rem 5rem;
+  padding: 1.4rem 6rem;
   text-align: center;
   white-space: nowrap;
   background: transparent;
   outline: none;
   border: 0.2rem solid ${props => props.theme.colors.purple};
   border-radius: 290486px;
-  font-weight: 700;
   color: ${props => props.theme.colors.purple};
   transition: all 0.2s ease-in-out;
 

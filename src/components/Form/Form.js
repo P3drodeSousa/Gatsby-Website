@@ -1,9 +1,27 @@
 import React from "react"
 import { Formik } from "formik"
-import { FormContainer, Label, Input, Title, TextArea, Button } from "./style"
+import {
+  FormContainer,
+  Label,
+  Input,
+  Title,
+  TextArea,
+  Button,
+  Nom,
+  Email,
+  TextAreaContainer,
+  ButtonContainer,
+} from "./style"
 
 const Form = () => (
-  <div>
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      alignItems: "center",
+      width: "50vw",
+    }}
+  >
     <Title>
       Thanks for taking the time to reach out. How can I help you today?
     </Title>
@@ -27,48 +45,52 @@ const Form = () => (
         isSubmitting,
       }) => (
         <FormContainer onSubmit={handleSubmit}>
-          <Label htmlFor="name">
-            Nom
-            <Input
-              type="name"
-              name="name"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.name}
-            />
-            {errors.name && touched.name && errors.name}
-          </Label>
+          <Nom>
+            <Label htmlFor="name">
+              Nom
+              <Input
+                type="name"
+                name="name"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.name}
+              />
+              {errors.name && touched.name && errors.name}
+            </Label>
+          </Nom>
 
-          <Label htmlFor="email">
-            Email
-            <Input
-              type="email"
-              name="email"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.email}
-            />
-            {errors.email && touched.email && errors.email}
-          </Label>
+          <Email>
+            <Label htmlFor="email">
+              Email
+              <Input
+                type="email"
+                name="email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.email}
+              />
+              {errors.email && touched.email && errors.email}
+            </Label>
+          </Email>
 
-          <Label htmlFor="message">
-            Message
-            <TextArea
-              rows="4"
-              cols="55"
-              name="message"
-              onChange={handleChange}
-              onBlur={handleBlur}
-              value={values.message}
-            />
-            {errors.message && touched.message && errors.message}
-          </Label>
+          <TextAreaContainer>
+            <Label htmlFor="message">
+              Message
+              <TextArea
+                name="message"
+                onChange={handleChange}
+                onBlur={handleBlur}
+                value={values.message}
+              />
+              {errors.message && touched.message && errors.message}
+            </Label>
+          </TextAreaContainer>
 
-          <div>
+          <ButtonContainer>
             <Button type="submit" disabled={isSubmitting}>
               Submit
             </Button>
-          </div>
+          </ButtonContainer>
         </FormContainer>
       )}
     </Formik>
