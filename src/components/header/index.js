@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import { Head, NavLink, Lien, HeaderContainer } from "./style"
+import { Head, NavLink, Lien, HeaderContainer, ButtonContainer } from "./style"
 import { MdClose } from "react-icons/md"
 
 const Header = ({ contact }) => {
@@ -23,11 +23,11 @@ const Header = ({ contact }) => {
 
         {contact ? (
           <>
-            <div>
+            <ButtonContainer>
               <Link to="/">
                 <MdClose size={30} color="#7510F7" />
               </Link>
-            </div>
+            </ButtonContainer>
           </>
         ) : (
           <NavLink contact={contact}>

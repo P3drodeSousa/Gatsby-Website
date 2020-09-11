@@ -17,14 +17,6 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 1270px;
-  @media ${props => props.theme.breakpoints.tablet} {
-    color: red;
-  }
-
-  @media ${props => props.theme.breakpoints.mobile} {
-    
-  }
-`
 `
 
 export const NavLink = styled.div`
@@ -44,12 +36,17 @@ export const NavLink = styled.div`
   &:hover {
     background: ${props => props.theme.colors.purple};
   }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    margin: auto 1rem;
+  }
 `
 
 export const Lien = styled(props => <Link {...props} />)`
   font-size: 1.8rem;
   line-height: 27px;
   padding: 100%;
+
   color: ${props => props.theme.colors.purple};
   font-weight: 800;
   transition: all 0.3s ease;
@@ -58,4 +55,12 @@ export const Lien = styled(props => <Link {...props} />)`
     color: ${props => props.theme.colors.white};
   }
 `
+export const ButtonContainer = styled.div`
+  @media ${props => props.theme.breakpoints.mobile} {
+    margin-right: 1rem;
+  }
 
+  @media ${props => props.theme.breakpoints.tablet} {
+    margin-right: 1rem;
+  }
+`

@@ -18,4 +18,16 @@ export const Section = styled.section`
     font-weight: 500;
     line-height: 3rem;
   }
+
+  @media ${props => props.theme.breakpoints.tablet} {
+    padding: 15rem 5rem 30rem 5rem;
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    padding: 15rem 1rem 30rem 1rem;
+
+    p {
+      margin: 1rem;
+    }
+  }
 `

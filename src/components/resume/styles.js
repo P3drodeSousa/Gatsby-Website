@@ -11,6 +11,10 @@ export const Section = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    padding: 4rem 1rem;
+  }
 `
 
 export const TitleContainer = styled.div`

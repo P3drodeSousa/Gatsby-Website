@@ -7,16 +7,10 @@ export const Section = styled.section`
   align-items: center;
   position: relative;
 
-  img {
-    position: absolute;
-    bottom: 0;
-    width: 650px;
-    height: 265px;
-  }
-
   @media ${props => props.theme.breakpoints.mobile} {
     margin: 20px;
     justify-content: center;
+    text-align: center;
   }
 `
 
@@ -37,5 +31,16 @@ export const H2 = styled.h2`
 
   @media ${props => props.theme.breakpoints.mobile} {
     font-size: 20px;
+  }
+`
+export const Image = styled.img`
+    position: absolute;
+    bottom: 0;
+    width: 650px;
+    height: 265px;
+
+    @media ${props => props.theme.breakpoints.mobile} {
+      display: none;
+    }
   }
 `

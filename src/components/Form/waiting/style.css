@@ -4,7 +4,9 @@
   font-weight: bold;
   font-size: 10vh;
   opacity: 0.8;
+  height: 300px;
 }
+
 .loader span {
   display: inline-block;
   -webkit-animation: pulse 0.4s alternate infinite ease-in-out;

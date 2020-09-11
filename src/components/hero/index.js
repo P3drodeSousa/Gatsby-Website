@@ -1,5 +1,5 @@
 import React from "react"
-import { Section, H1, H2 } from "./styles"
+import { Section, H1, H2, Image } from "./styles"
 import Img from "gatsby-image"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -32,7 +32,7 @@ const Hero = () => {
           height: "232px",
         }}
       />
-      <img src={hero} alt="hero" />
+      <Image src={hero} alt="hero" />
     </Section>
   )
 }

@@ -1,5 +1,16 @@
 import styled from "styled-components"
 
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    width: 90vw;
+  }
+`
+
 export const Title = styled.h1`
   font-weight: 500;
   text-align: center;
@@ -13,6 +24,11 @@ export const FormContainer = styled.form`
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 2.5fr 1.4fr;
   grid-gap: 30px;
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    width: 90%;
+    margin-bottom: 10rem;
+  }
 `
 
 export const Nom = styled.div`

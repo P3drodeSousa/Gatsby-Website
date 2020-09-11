@@ -3,6 +3,7 @@ import { Formik } from "formik"
 import { navigate } from "gatsby"
 import { validateSchema } from "./validateShema"
 import {
+  Container,
   FormContainer,
   Label,
   Input,
@@ -21,14 +22,7 @@ let SentError = false
 let EmailSent = false
 
 const Form = () => (
-  <div
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      alignItems: "center",
-      width: "50vw",
-    }}
-  >
+  <Container>
     <Title>
       Merci d'avoir pris le temps de me contacter. Comment puis-je vous aider ?
     </Title>
@@ -138,7 +132,7 @@ const Form = () => (
         </>
       )}
     </Formik>
-  </div>
+  </Container>
 )
 
 export default Form

@@ -9,6 +9,10 @@ export const Foot = styled.footer`
   justify-content: center;
   padding: 15rem 15rem 7rem 15rem;
   text-align: center;
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    padding: 15rem 1rem 7rem 1rem;
+  }
 `
 
 export const Span = styled.span`

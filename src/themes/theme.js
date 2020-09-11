@@ -19,7 +19,7 @@ export default {
 
   breakpoints: {
     mobile: "only screen and (max-width: 50rem)",
-    tablet: "only screen and (max-width: 65rem)",
+    tablet: "only screen and (max-width: 800rem)",
   },
   shadows: {
     shadow: "0 5px 5px 0 rgba(233, 240, 243, 0.5), 0 0 0 1px #E6ECF8",
