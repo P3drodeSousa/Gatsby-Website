@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <Section>
-      <H1>FullStack Developpeur</H1>
+      <H1>FullStack Développeur</H1>
       <H2>
         I design and code beautifully simple things, and I love what I do.
       </H2>

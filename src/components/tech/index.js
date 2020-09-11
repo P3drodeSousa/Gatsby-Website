@@ -1,14 +1,15 @@
 import React from "react"
 import { Container, H3 } from "../style"
 import { PriceContainer, Price } from "./styles"
-import { GrCode, GrCompliance, GrBook } from "react-icons/gr"
+import { BsCodeSlash } from "react-icons/bs"
+import { BiTask, BiBookBookmark } from "react-icons/bi"
 
 const Tech = () => {
   return (
     <Container>
       <PriceContainer>
         <Price>
-          <GrCode size={70} color="#7510F7" />
+          <BsCodeSlash size={70} color="#7510F7" />
           <H3>Technologies</H3>
           <ul>
             <li>HTML</li>
@@ -30,7 +31,7 @@ const Tech = () => {
           </ul>
         </Price>
         <Price>
-          <GrCompliance size={70} color="#7510F7" />
+          <BiTask size={70} color="#7510F7" />
           <H3>Competences</H3>
           <ul>
             <li> Développement REST / Graphql API</li>
@@ -38,10 +39,13 @@ const Tech = () => {
             <li> Développement front-end</li>
             <li> Développement mobile</li>
             <li>UI Design (web et mobile)</li>
+            <li>Gestion des bases de données</li>
+            <li>Optimisation des applications clients</li>
+            <li>Connaissances en PWA</li>
           </ul>
         </Price>
         <Price>
-          <GrBook size={70} color="#7510F7" />
+          <BiBookBookmark size={70} color="#7510F7" />
           <H3>Initiations</H3>
           <ul>
             <li>Angular</li>

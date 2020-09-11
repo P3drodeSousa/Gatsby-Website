@@ -39,9 +39,11 @@ export const Input = styled.input`
   width: 100%;
   margin-top: 0.5rem;
   padding: 1.5rem;
-  border: 1px solid #e6ecf8;
   outline: none;
-
+  background-color: ${props =>
+    props.error ? "rgba(235, 54, 54, 0.2)" : "white"};
+  border: ${props =>
+    props.error ? "2px solid rgb(235, 54, 54)" : "1px solid #e6ecf8"};
   color: #363636;
 
   &:focus {
@@ -53,9 +55,12 @@ export const TextArea = styled.textarea`
   margin-top: 0.5rem;
   height: 100%;
   width: 100%;
-  border: 1px solid #e6ecf8;
   outline: none;
   resize: none;
+  background-color: ${props =>
+    props.error ? "rgba(235, 54, 54, 0.2)" : "white"};
+  border: ${props =>
+    props.error ? "2px solid rgb(235, 54, 54)" : "1px solid #e6ecf8"};
 
   &:focus {
     border: 1px solid #3273dc;
@@ -80,4 +85,10 @@ export const Button = styled.button`
     color: ${props => props.theme.colors.white};
     background: ${props => props.theme.colors.purple};
   }
+`
+export const Error = styled.div`
+  color: rgb(235, 54, 54);
+  font-size: 0.9rem;
+  font-weight: 550;
+  margin-top: 0.5rem;
 `

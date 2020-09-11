@@ -6,10 +6,12 @@ import Tech from "../components/tech"
 import Resume from "../components/resume"
 import Footer from "../components/footer"
 import Header from "../components/header"
+import SEO from "../components/Seo"
 
 export default function Home() {
   return (
     <Layout>
+      <SEO title="Home" />
       <Header />
       <Hero />
       <Description />

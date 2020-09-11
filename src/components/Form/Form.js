@@ -1,5 +1,7 @@
 import React from "react"
 import { Formik } from "formik"
+import { navigate } from "gatsby"
+import { validateSchema } from "./validateShema"
 import {
   FormContainer,
   Label,
@@ -11,7 +13,12 @@ import {
   Email,
   TextAreaContainer,
   ButtonContainer,
+  Error,
 } from "./style"
+import Waiting from "./waiting/index.js"
+
+let SentError = false
+let EmailSent = false
 
 const Form = () => (
   <div
@@ -23,16 +30,24 @@ const Form = () => (
     }}
   >
     <Title>
-      Thanks for taking the time to reach out. How can I help you today?
+      Merci d'avoir pris le temps de me contacter. Comment puis-je vous aider ?
     </Title>
     <Formik
       initialValues={{ name: "", email: "", message: "" }}
-      //   validate={}
-      onSubmit={(values, { setSubmitting }) => {
-        setTimeout(() => {
-          alert(JSON.stringify(values, null, 2))
-          setSubmitting(false)
-        }, 400)
+      validationSchema={validateSchema}
+      onSubmit={async (values, { setSubmitting }) => {
+        const ok = await fetch("http://localhost:5000/form", {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(values),
+        })
+        const res = await ok.json()
+
+        SentError = !res.ok
+        EmailSent = res.emailSent
+        setSubmitting(false)
       }}
     >
       {({
@@ -44,54 +59,83 @@ const Form = () => (
         handleSubmit,
         isSubmitting,
       }) => (
-        <FormContainer onSubmit={handleSubmit}>
-          <Nom>
-            <Label htmlFor="name">
-              Nom
-              <Input
-                type="name"
-                name="name"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.name}
-              />
-              {errors.name && touched.name && errors.name}
-            </Label>
-          </Nom>
+        <>
+          <div>{SentError && <span>Something went wrong </span>}</div>
 
-          <Email>
-            <Label htmlFor="email">
-              Email
-              <Input
-                type="email"
-                name="email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.email}
-              />
-              {errors.email && touched.email && errors.email}
-            </Label>
-          </Email>
+          {isSubmitting ? (
+            <Waiting />
+          ) : EmailSent ? (
+            <div
+              style={{
+                display: "flex",
+                height: "30rem",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+              }}
+            >
+              <h1 style={{ color: "green" }}>
+                Votre Message a été envoyé avec succès.
+              </h1>
+              <Button onClick={() => navigate("/")}>HomePage</Button>
+            </div>
+          ) : (
+            <FormContainer onSubmit={handleSubmit}>
+              <Nom>
+                <Label htmlFor="name">
+                  Nom
+                  <Input
+                    type="name"
+                    name="name"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.name}
+                    error={errors.name}
+                  />
+                </Label>
+                {errors.name && touched.name && <Error>{errors.name}</Error>}
+              </Nom>
 
-          <TextAreaContainer>
-            <Label htmlFor="message">
-              Message
-              <TextArea
-                name="message"
-                onChange={handleChange}
-                onBlur={handleBlur}
-                value={values.message}
-              />
-              {errors.message && touched.message && errors.message}
-            </Label>
-          </TextAreaContainer>
+              <Email>
+                <Label htmlFor="email">
+                  Email
+                  <Input
+                    type="email"
+                    name="email"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.email}
+                    error={errors.email}
+                  />
+                  {errors.email && touched.email && (
+                    <Error>{errors.email}</Error>
+                  )}
+                </Label>
+              </Email>
 
-          <ButtonContainer>
-            <Button type="submit" disabled={isSubmitting}>
-              Submit
-            </Button>
-          </ButtonContainer>
-        </FormContainer>
+              <TextAreaContainer>
+                <Label htmlFor="message">
+                  Message
+                  <TextArea
+                    name="message"
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                    value={values.message}
+                    error={errors.message}
+                  />
+                  {errors.message && touched.message && (
+                    <Error>{errors.message}</Error>
+                  )}
+                </Label>
+              </TextAreaContainer>
+              <ButtonContainer>
+                <Button type="submit" disabled={isSubmitting}>
+                  Submit
+                </Button>
+              </ButtonContainer>
+            </FormContainer>
+          )}
+        </>
       )}
     </Formik>
   </div>

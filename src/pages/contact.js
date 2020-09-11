@@ -3,6 +3,7 @@ import Layout from "../components"
 import Form from "../components/Form/Form"
 import Header from "../components/header"
 import { graphql, useStaticQuery } from "gatsby"
+import SEO from "../components/Seo"
 
 export default function Contact() {
   const data = useStaticQuery(graphql`
@@ -18,6 +19,7 @@ export default function Contact() {
 
   return (
     <Layout>
+      <SEO title="Contact" />
       <Header contact={true} />
       <div
         style={{

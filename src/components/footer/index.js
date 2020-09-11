@@ -25,6 +25,7 @@ const Footer = () => {
 
       <SocialContainer>
         <div
+          aria-hidden
           onMouseEnter={() => setColor("#7510F7")}
           onMouseLeave={() => setColor("white")}
         >
@@ -33,10 +34,11 @@ const Footer = () => {
           </a>
         </div>
         <div
+          aria-hidden
           onMouseEnter={() => setColor2("#7510F7")}
           onMouseLeave={() => setColor2("white")}
         >
-          <a href="mailto:contact@pesousa.ch">
+          <a role="button" href="mailto:contact@pesousa.ch">
             <AiOutlineMail size={30} color={color2} />
           </a>
         </div>
