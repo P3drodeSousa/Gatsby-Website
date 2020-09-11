@@ -31,7 +31,6 @@ export const ButtonContainer = styled.div`
 `
 
 export const Label = styled.label`
-  font-size: ${props => props.theme.title.p};
   color: ${props => props.theme.colors.silver};
 `
 
