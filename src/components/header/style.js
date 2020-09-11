@@ -17,6 +17,14 @@ export const HeaderContainer = styled.div`
   align-items: center;
   justify-content: center;
   max-width: 1270px;
+  @media ${props => props.theme.breakpoints.tablet} {
+    color: red;
+  }
+
+  @media ${props => props.theme.breakpoints.mobile} {
+    
+  }
+`
 `
 
 export const NavLink = styled.div`
@@ -50,3 +58,4 @@ export const Lien = styled(props => <Link {...props} />)`
     color: ${props => props.theme.colors.white};
   }
 `
+
