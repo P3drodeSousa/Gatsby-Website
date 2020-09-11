@@ -11,6 +11,7 @@ export const Section = styled.section`
     font-size: 2.8rem;
     font-weight: 600;
   }
+
   p {
     font-size: ${props => props.theme.title.p};
     margin: auto 10rem;
