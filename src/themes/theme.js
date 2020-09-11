@@ -14,7 +14,7 @@ export default {
     h1: "3.2rem",
     h2: "2rem",
     h3: "2.4rem",
-    p: "1.8rem",
+    paragraphe: "1.8rem",
   },
 
   breakpoints: {
