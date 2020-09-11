@@ -83,8 +83,8 @@ export const Button = styled.button`
 `
 
 export const Label = styled.label`
-  font-size: ${props => props.theme.title.p};
-  color: ${props => props.theme.colors.silver};
+  font-size: 1.8rem;
+  color: rgba(41, 51, 71, 0.65);
 `
 
 export const Error = styled.div`
