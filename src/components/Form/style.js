@@ -30,9 +30,10 @@ export const ButtonContainer = styled.div`
   justify-self: center;
 `
 
-export const Label = styled.label`
-  color: ${props => props.theme.colors.silver};
-`
+// export const Label = styled.label`
+//  font-size: ${props => props.theme.title.p};
+//   color: ${props => props.theme.colors.silver};
+// `
 
 export const Input = styled.input`
   width: 100%;
