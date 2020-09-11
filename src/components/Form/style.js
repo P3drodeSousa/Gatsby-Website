@@ -30,11 +30,6 @@ export const ButtonContainer = styled.div`
   justify-self: center;
 `
 
-// export const Label = styled.label`
-//  font-size: ${props => props.theme.title.p};
-//   color: ${props => props.theme.colors.silver};
-// `
-
 export const Input = styled.input`
   width: 100%;
   margin-top: 0.5rem;
@@ -86,6 +81,12 @@ export const Button = styled.button`
     background: ${props => props.theme.colors.purple};
   }
 `
+
+export const Label = styled.label`
+  font-size: ${props => props.theme.title.p};
+  color: ${props => props.theme.colors.silver};
+`
+
 export const Error = styled.div`
   color: rgb(235, 54, 54);
   font-size: 0.9rem;
