@@ -11,11 +11,7 @@ const Resume = () => {
         </TitleContainer>
         <div>
           <Button>
-            <a
-              href="http://www.africau.edu/images/default/sample.pdf"
-              target="blank"
-              download
-            >
+            <a href="https://docdro.id/DxB8VYs" target="blank" download>
               Donwload
             </a>
           </Button>
