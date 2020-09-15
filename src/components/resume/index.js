@@ -11,7 +11,11 @@ const Resume = () => {
         </TitleContainer>
         <div>
           <Button>
-            <a href="https://pesousa.dev/images/cv.pdf" target="blank" download>
+            <a
+              href="https://drive.google.com/file/d/1W58XoAiXe_JJzkbGPj6MH1PTC1jcqhbB/view?usp=sharing"
+              target="blank"
+              download
+            >
               Donwload
             </a>
           </Button>
