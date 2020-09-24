@@ -30,7 +30,7 @@ const Form = () => (
       initialValues={{ name: "", email: "", message: "" }}
       validationSchema={validateSchema}
       onSubmit={async (values, { setSubmitting }) => {
-        const ok = await fetch("http://localhost:5000/form", {
+        const ok = await fetch("https://pedroapipedro.herokuapp.com/form", {
           method: "post",
           headers: {
             "Content-Type": "application/json",
