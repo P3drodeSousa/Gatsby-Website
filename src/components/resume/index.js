@@ -1,7 +1,7 @@
 import React from "react"
 import { Container } from "../style"
 import { Section, TitleContainer, Button } from "./styles"
-
+import downloadFile from "../../assets/cv.pdf"
 const Resume = () => {
   return (
     <Container>
@@ -11,11 +11,7 @@ const Resume = () => {
         </TitleContainer>
         <div>
           <Button>
-            <a
-              href="https://drive.google.com/file/d/1W58XoAiXe_JJzkbGPj6MH1PTC1jcqhbB/view?usp=sharing"
-              target="blank"
-              download
-            >
+            <a href={downloadFile} download>
               Donwload
             </a>
           </Button>
